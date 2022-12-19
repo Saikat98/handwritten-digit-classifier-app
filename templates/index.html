@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Predict Digits</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='image/favicon.png') }}">
+</head>
+<body>
+    <form id="form">
+        <div class="display">
+            <div class="container">
+                <div class="input">
+                    <div class="header">
+                        <!-- <h2 class="title">Recognize Numbers</h2> -->
+                        <!-- <span class="subtitle">Draw a number below</span> -->
+                    </div>
+                    <canvas id="drawing-board"></canvas>
+                    <div class="buttons">
+                        <button type="submit" id="pred-btn" value="predict" class="pred-btn" disabled>Predict</button> 
+                        <button id="clear-btn" class="clear-btn" value="clear">Clear</button> 
+                    </div>
+                </div>
+                <div class="output">
+                    <!-- <span class="subtitle">Output</span>     -->
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">0</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">1</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">2</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">3</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">4</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">5</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">6</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">7</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">8</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                    <div id="progress-bar" class="progress-bar">
+                        <div class="label">9</div>
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="try-again" id="try-again">Prediction failed. Please try again</div>
+                <div id="instructions" class="instructions">
+                    <div class="instructions-header">
+                        <span class="instructions-title">Instructions</span>
+                        <span id="instructions-close" class="instructions-close">X</span>
+                    </div>
+                    <div class="instructions-body">
+                        <p>
+                            This is an fun project to show how we can utilize machine-learning to predict handwritten numbers in an interactive way.
+                            Draw digits in the canvas and hit predict to see whether the computer predicts correctly.<br><u>Works best on Google Chrome</u>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <!-- Made with <img src="{{ url_for('static',filename='image/heart-icon.png') }}" alt="heart-icon"> by Saikat -->
+                &copy; Saikat Sutradhar, 2022
+            </div>
+        </div> 
+    </form>
+    <script type="text/javascript" src="{{ url_for('static',filename='script/script.js') }}"></script>
+</body>
+</html>
